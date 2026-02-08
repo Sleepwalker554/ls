@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+    --bg-light: #f4f1ee;
+    --bg-dark: #e8e4df;
+    --accent: #c5a47e;
+    --text-main: #2d2d2d;
+    --text-muted: #64748b;
+    --transition-smooth: all 1.0s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body, html { margin: 0; padding: 0; overflow-x: hidden; scroll-behavior: smooth; font-family: 'DM Sans', sans-serif; background-color: var(--bg-light); color: var(--text-main); }
+.title-font { font-family: 'Playfair Display', serif; }
+
+/* 全屏烟花画布 */
+#fireworksCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+section { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 50px 10%; position: relative; box-sizing: border-box; }
+section:nth-child(even) { background-color: var(--bg-dark); }
+
+.content-box { max-width: 1100px; width: 100%; opacity: 0; transform: translateY(30px); transition: var(--transition-smooth); }
+.in-view .content-box { opacity: 1; transform: translateY(0); }
+
+/* 照片等大网格 */
+.standard-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.grid-item { display: flex; flex-direction: column; gap: 15px; }
+
+/* Travel section 特殊布局 */
+#travel {
+    display: block;
+    padding: 10vh 10%;
+}
+
+#travel .content-box {
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Travel 照片容器 - 全屏宽度 */
+.travel-grid-container {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 3vh 5%;
+    box-sizing: border-box;
+}
+
+/* Travel 照片网格 - 上下等高，左右自适应 */
+.travel-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1vw;
+}
+
+.travel-grid .img-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.travel-grid .img-wrapper img {
+    height: 25vh;
+    width: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+.travel-grid .img-caption {
+    border-left: none;
+    padding-left: 0;
+    text-align: center;
+}
+
+.img-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(0.2);
+    transition: 0.8s;
+}
+
+.grid-item:hover img { filter: grayscale(0); transform: scale(1.05); }
+
+.img-caption {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    border-left: 2px solid var(--accent);
+    padding-left: 12px;
+}
+
+/* 侧边导航 */
+.nav-dots { position: fixed; right: 30px; top: 50%; transform: translateY(-50%); z-index: 100; }
+.dot { width: 8px; height: 8px; background: rgba(0,0,0,0.2); margin: 20px 0; border-radius: 50%; cursor: pointer; transition: 0.3s; }
+.dot.active { background: var(--accent); transform: scale(1.8); }
+
+/* 底栏 */
+.contact-footer { background: white; padding: 80px 0; border-top: 1px solid rgba(0,0,0,0.05); }
+.footer-link { font-size: 1.6rem; color: var(--text-main); transition: 0.3s; }
+.footer-link:hover { color: var(--accent); transform: translateY(-3px); }
+
+/* 其他基础样式 */
+.home-name { font-size: 3.5rem; margin-bottom: 1.5rem; }
+.home-bio { font-size: 1.5rem; line-height: 1.6; }
+.btn-unified { background: var(--text-main); color: white !important; padding: 12px 28px; border-radius: 4px; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; transition: all 0.3s ease; }
+.btn-unified:hover { background: var(--accent); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+.timeline-item { display: flex; justify-content: space-between; padding-bottom: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.05); }
+
+/* Flappy Bird 游戏样式 */
+#game-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    height: 500px;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, #87ceeb 0%, #e0f6ff 100%);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    border: 3px solid rgba(255,255,255,0.5);
+}
+
+#flappyCanvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#start-hint {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    color: var(--text-main);
+    background: rgba(255,255,255,0.95);
+    padding: 30px 50px;
+    border-radius: 12px;
+    pointer-events: none;
+    animation: pulse 2s infinite;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    border: 2px solid var(--accent);
+}
+
+#game-over-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#final-score {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    color: white;
+}
+
+#restart-btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'DM Sans', sans-serif;
+}
+
+#restart-btn:hover {
+    background: var(--text-main);
+    transform: scale(1.05);
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 0.7; transform: translate(-50%, -50%) scale(1.05); }
+}

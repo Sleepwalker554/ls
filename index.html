@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 全屏烟花画布 -->
+    <canvas id="fireworksCanvas"></canvas>
+
+    <nav class="nav-dots">
+        <div class="dot active" onclick="scrollToSection(0)"></div>
+        <div class="dot" onclick="scrollToSection(1)"></div>
+        <div class="dot" onclick="scrollToSection(2)"></div>
+        <div class="dot" onclick="scrollToSection(3)"></div>
+        <div class="dot" onclick="scrollToSection(4)"></div>
+        <div class="dot" onclick="scrollToSection(5)"></div>
+    </nav>
+
+    <section id="home">
+        <div class="content-box flex flex-col md:flex-row items-center gap-16">
+            <div class="flex-none">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjiwoHPce1Yw3jKGQam4or5qOYw1u2q7TqQhlHS8p9WhVA8pDrdR3oiFuswRl9VpHwROnmY6CIRyOEJ9QXynIOBVQDUQ5Uw9Q9Myy7bBXSH_rYcJKXyDJAWKWsKJReacqpJttLUOCZhBuk/s1600/Tree+of+Life+10.jpg" alt="Profile" class="w-96 h-96 object-cover rounded-lg transition-all duration-700 shadow-2xl">
+            </div>
+            <div class="flex-1 text-center md:text-left">
+                <h1 class="title-font home-name">Luqi Sun</h1>
+                <p class="home-bio text-slate-600 mb-10 italic text-lg">I am currently a master’s student in the Department of Electrical and Computer Engineering at Johns Hopkins University, working as a Research Assistant in the SMILE Lab affiliated with the Center for Language and Speech Processing (CLSP), under the supervision of Professor Berrak Sisman. I received my bachelor’s degree from Dalian University of Technology, where I worked as a Research Assistant in a laboratory under the supervision of Professor Qiufen Xia during my undergraduate studies. 
+                    <br>I am passionate about research. During my undergraduate studies, my research focused on cold-start latency optimization in cloud computing and serverless computing, and I published related research as the first author. Currently, my research interests focus on speech processing and healthcare-related speech detection based on deep learning methods. 
+                    <br>In addition to research, I also love films and traveling. My current dream is to travel to France to watch films at the Cannes Film Festival.
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-5">
+                    <a href="#" class="btn-unified">
+                        <i class="fas fa-file-pdf"></i> Download CV
+                    </a>
+                    <a href="https://scholar.google.com/citations?hl=zh-CN&user=8fUjHv4AAAAJ" target="_blank" class="btn-unified">
+                        <i class="fas fa-graduation-cap"></i> Google Scholar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="academic">
+        <div class="content-box">
+            <div class="mb-20">
+                <h2 class="title-font text-4xl mb-10 border-l-4 border-amber-600 pl-6">Research Experience</h2>
+                <div class="timeline-item">
+                    <div>
+                        <h3 class="text-2xl font-bold">The Optimization of Cold Start Latency in Serverless Computing</h3>
+                        <p class="text-slate-800 italic">Research Assistant in Dalian University of Technology, Advised by Prof. Qiufen Xia</p>
+                        <p class="text-lg text-slate-600">Proposed and implemented an innovative Serverless cold-start optimization solution based on nested containers, enabling rapid initialization of child containers through parent-container pre-warming and significantly reducing function cold-start latency. Independently designed and optimized a nested-container resource scheduling system, including parent-container pre-warming strategies to minimize startup delay and resource waste. Independently developed a child-container resource allocation algorithm to improve function execution performance, and built an adaptive Serverless resource scheduling system.
+                        </p>
+                    </div>
+                    <span class="italic">2024.02 - 2025.05</span>
+                </div>
+                <div class="timeline-item">
+                    <div>
+                        <h3 class="text-2xl font-bold">Alzheimer's Disease Detection From Speech</h3>
+                        <p class="text-slate-800 italic">Research Assistant in SMILE Lab (Johns Hopkins University), Advised by Prof. Berrak Sisman</p>
+                        <p class="text-lg text-slate-600">Will come soon</p>
+                        <!-- <p class="text-lg text-slate-600">Conducted Alzheimer’s disease speech detection based on deep learning approaches. Designed and implemented three speech detection models with different levels of complexity. Improved model robustness under noise interference, varying recording environments, and speaker variability using multiple unsupervised domain adaptation methods. Proposed a novel unsupervised domain adaptation approach, and experimental results demonstrate that the proposed method effectively improves detection performance and robustness under cross-domain conditions.</p> -->
+                    </div>
+                    <span class="italic">2025.09 - Present</span>
+                </div>
+            </div>
+            <div>
+                <h2 class="title-font text-4xl mb-10 border-l-4 border-slate-400 pl-6">Education</h2>
+                <div class="timeline-item">
+                    <div>
+                        <h3 class="text-xl font-bold">Dalian University of Technology · Bachelor</h3>
+                        <p class="text-grey-500">Digital Media Technology</p>
+                    </div>
+                    <span class="italic">2021 - 2025</span>
+                </div>
+                <div class="timeline-item">
+                    <div>
+                        <h3 class="text-xl font-bold">Johns Hopkins University · Master</h3>
+                        <p class="text-grey-500">Electricial and Computer Engineering</p>
+                    </div>
+                    <span class="italic">2025 - 2027</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications">
+        <div class="content-box">
+            <h2 class="title-font text-5xl mb-4 italic">Publications</h2>
+            <div class="space-y-8 mt-10">
+                <div class="p-8 bg-white/50 rounded-xl border border-white hover:shadow-lg transition">
+                    <span class="text-amber-700 font-bold text-xs tracking-widest">Published in 2025</span>
+                    <h3 class="text-2xl font-bold mt-2 mb-6">“The Optimization of Container Cold Start Latency in Serverless Computing by Nested Architecture”</h3>
+                    <div class="flex gap-6">
+                        <a href="https://ieeexplore.ieee.org/abstract/document/11327821" class="text-sm font-bold border-b border-slate-800">Paper PDF</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-8 mt-10">
+                <div class="p-8 bg-white/50 rounded-xl border border-white hover:shadow-lg transition">
+                    <span class="text-amber-700 font-bold text-xs tracking-widest">Published in 2026</span>
+                    <h3 class="text-2xl font-bold mt-2 mb-6">“Will Come Soon”</h3>
+                    <div class="flex gap-6">
+                        <a href="#" class="text-sm font-bold border-b border-slate-800">Paper PDF</a>
+                        <a href="#" class="text-sm font-bold border-b border-slate-800">Code</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="movies">
+        <div class="content-box">
+            <h2 class="title-font text-5xl mb-4 italic">Film</h2>
+            <p>I love films. I savor every moment spent watching a great movie, and I cherish every second inside a cinema. Films are not only dream-making machines, they also carry the full weight of human philosophical reflection. Through cinema, I explore both the darkest corners of human emotion and the noblest of virtues—the echo of human nature. 
+                <br>To date, I have watched around 1,400 films, and below are ten of my most beloved among them.
+            </p>
+            <div class="standard-grid">
+                <div class="grid-item">
+                    <a href="https://www.imdb.com/title/tt0478304/" target="_blank">
+                        <div class="img-wrapper"><img src="https://m.media-amazon.com/images/M/MV5BMTMwNjQ0NjMzN15BMl5BanBnXkFtZTcwNjMxMTkyNA@@._V1_.jpg" alt="Movie 1"></div>
+                        <p class="img-caption">Tree of Life
+                            <br><i>Terrence Malick, 2011</i></p> 
+                        </p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://www.imdb.com/title/tt0085533/?ref_=fn_t_1" target="_blank">
+                    <div class="img-wrapper"><img src="https://m.media-amazon.com/images/M/MV5BZTFmM2ZlZjItZDc3NS00ODE2LWE2N2QtNmM3OTZiODYzYjkzXkEyXkFqcGc@._V1_.jpg" alt="Movie 2"></div>
+                    <p class="img-caption">The Boys from Fengkuei
+                        <br><i>Hsiao-Hsien Hou, 1983</i></p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://www.imdb.com/title/tt0079522/?ref_=nv_sr_srsg_0_tt_7_nm_1_in_0_q_Manhattan" target="_blank">
+                    <div class="img-wrapper"><img src="https://m.media-amazon.com/images/M/MV5BMzhjMjEyOWItMWU2Ni00ZTE5LWFhODEtZGU1MTQyZjU4ODkzXkEyXkFqcGc@._V1_.jpg" alt="Movie 3"></div>
+                    <p class="img-caption">Manhattan<br>
+                        <i>Woody Allen, 1979</i></p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://www.imdb.com/title/tt0099685/?ref_=fn_t_1" target="_blank">
+                    <div class="img-wrapper"><img src="https://m.media-amazon.com/images/M/MV5BN2E5NzI2ZGMtY2VjNi00YTRjLWI1MDUtZGY5OWU1MWJjZjRjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Movie 1"></div>
+                    <p class="img-caption">GoodFellas
+                        <br><i>Martin Scorsese, 1990</i></p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://www.imdb.com/title/tt0111845/?ref_=fn_t_1" target="_blank">
+                    <div class="img-wrapper"><img src="https://m.media-amazon.com/images/M/MV5BMjI1ZDdhM2ItNjY0NC00MjRhLWIwZDMtNWZhMzcwNjkwNjQyXkEyXkFqcGc@._V1_.jpg" alt="Movie 2"></div>
+                    <p class="img-caption">Through the Olive Trees<br>
+                        <i>Abbas Kiarostami, 1992</i></p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://www.imdb.com/title/tt0112913/?ref_=fn_t_1" target="_blank">
+                    <div class="img-wrapper"><img src="https://m.media-amazon.com/images/M/MV5BMTc3NzI0MzQ3M15BMl5BanBnXkFtZTcwMzA0MDMzNA@@._V1_.jpg" alt="Movie 3"></div>
+                    <p class="img-caption">Fallen Angels<br>
+                        <i> Wong Kar-wai, 1995</i></p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://www.imdb.com/title/tt0109685/?ref_=fn_t_1" target="_blank">
+                    <div class="img-wrapper"><img src="https://m.media-amazon.com/images/M/MV5BODJjNzQzMGUtZWZhNi00Y2Q0LWI1ZjEtMjM3NmMxZjI1MzM3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Movie 1"></div>
+                    <p class="img-caption">A Confucian Confusion<br>
+                        <i>Edward Yang, 1994</i></p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://www.imdb.com/title/tt19770238/?ref_=mv_close" target="_blank">
+                    <div class="img-wrapper"><img src="https://m.media-amazon.com/images/M/MV5BZWU5Y2MyZjQtNGVjYi00ZDRkLTk1MGYtYmNlMzI0MTFmNDU2XkEyXkFqcGc@._V1_.jpg" alt="Movie 2"></div>
+                    <p class="img-caption">Aftersun<br>
+                        <i>Charlotte Wells, 2022</i></p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://www.imdb.com/title/tt0106559/?ref_=fn_t_2" target="_blank">
+                    <div class="img-wrapper"><img src="https://m.media-amazon.com/images/M/MV5BMmZhNzNjNjktZTVkYy00ODM0LWI1YWMtZmU0MDI2NDg1MGEwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Movie 3"></div>
+                    <p class="img-caption">Green Snake<br>
+                        <i>Hark Tsui, 1993</i></p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://www.imdb.com/title/tt3824458/?ref_=nv_sr_srsg_0_tt_5_nm_3_in_0_q_Tangerine" target="_blank">
+                    <div class="img-wrapper"><img src="https://m.media-amazon.com/images/M/MV5BMjEzNzY2NjYwOV5BMl5BanBnXkFtZTgwOTY1MDU1NTE@._V1_.jpg" alt="Movie 1"></div>
+                    <p class="img-caption">Tangerine<br>
+                        <i>Sean Baker, 2015</i></p>
+                    </a>
+                </div>
+            </div>
+            <p class="text-xl italic"><br><br>“After the invention of cinema, human life has been extended at least threefold.” —— Yi yi, Edward Yang</p>
+        </div>
+    </section>
+
+    <section id="travel">
+        <div class="content-box">
+            <h2 class="title-font text-5xl mb-4 italic">Travel</h2>
+            <p>I love traveling. I enjoy stepping into a bustling and unfamiliar city, experiencing people’s ways of life and the vibrancy of everyday moments. I also enjoy witnessing magnificent and vast natural landscapes, bearing witness to the beauty of nature. Through traveling, I come to know the world, and through traveling, I come to know myself. So let’s hit the road and begin those days between departure and arrival. See you down the road.
+                <br>Below are some of the cities I have visited and photos I took during the journeys.
+            </p>
+        </div>
+        <div class="travel-grid-container">
+            <div class="travel-grid">
+                <div class="grid-item">
+                    <div class="img-wrapper"><img src="image/1.jpg" alt="Travel 1"></div>
+                    <p class="img-caption">January 2023<br>Wukang Mansion, Shanghai</p>
+                </div>
+                <div class="grid-item">
+                    <div class="img-wrapper"><img src="image/2.jpg" alt="Travel 2"></div>
+                    <p class="img-caption">July 2023<br>FIRST International Film Festival, Xining</p>
+                </div>
+                <div class="grid-item">
+                    <div class="img-wrapper"><img src="image/3.jpg" alt="Travel 3"></div>
+                    <p class="img-caption">July 2023<br>Chaka Salt Lake, Qinghai</p>
+                </div>
+                <div class="grid-item">
+                    <div class="img-wrapper"><img src="image/4.jpg" alt="Travel 1"></div>
+                    <p class="img-caption">July 2023<br>Singing Sand Dunes, Dunhuang</p>
+                </div>
+                <div class="grid-item">
+                    <div class="img-wrapper"><img src="image/5.jpg" alt="Travel 2"></div>
+                    <p class="img-caption">Febrary 2024<br>Ruins of St. Paul's, Macau</p>
+                </div>
+                <div class="grid-item">
+                    <div class="img-wrapper"><img src="image/6.jpg" alt="Travel 3"></div>
+                    <p class="img-caption">Febrary 2024<br>Chungking Mansions, Hong Kong</p>
+                </div>
+                <div class="grid-item">
+                    <div class="img-wrapper"><img src="image/7.jpg" alt="Travel 1"></div>
+                    <p class="img-caption">May 2024<br>Temple of Heaven, Beijing</p>
+                </div>
+                <div class="grid-item">
+                    <div class="img-wrapper"><img src="image/8.jpg" alt="Travel 2"></div>
+                    <p class="img-caption">Febrary 2025<br>West Lake, Hangzhou</p>
+                </div>
+                <div class="grid-item">
+                    <div class="img-wrapper"><img src="image/9.jpg" alt="Travel 3"></div>
+                    <p class="img-caption">Febrary 2025<br>Sun Yat-sen Mausoleum Music Stage, Nanjing</p>
+                </div>
+                <div class="grid-item">
+                    <div class="img-wrapper"><img src="image/10.jpg" alt="Travel 1"></div>
+                    <p class="img-caption">August 2025<br>N Seoul Tower, Seoul</p>
+                </div>
+                <div class="grid-item">
+                    <div class="img-wrapper"><img src="image/11.jpg" alt="Travel 1"></div>
+                    <p class="img-caption">May 2024<br>Busan</p>
+                </div>
+                <div class="grid-item">
+                    <div class="img-wrapper"><img src="image/12.jpg" alt="Travel 2"></div>
+                    <p class="img-caption">December 2025<br>Washington D.C.</p>
+                </div>
+                <div class="grid-item">
+                    <div class="img-wrapper"><img src="image/13.jpg" alt="Travel 3"></div>
+                    <p class="img-caption">December 2025<br>Hongya Cave, Chongqing</p>
+                </div>
+                <div class="grid-item">
+                    <div class="img-wrapper"><img src="image/14.jpg" alt="Travel 1"></div>
+                    <p class="img-caption">January 2026<br>Three Natural Bridges, Wulong</p>
+                </div>
+                <div class="grid-item">
+                    <div class="img-wrapper"><img src="image/15.jpg" alt="Travel 3"></div>
+                    <p class="img-caption">January 2026<br>Star Ferry, Hong Kong</p>
+                </div>
+                <div class="grid-item">
+                    <div class="img-wrapper"><img src="image/16.jpg" alt="Travel 1"></div>
+                    <p class="img-caption">January 2026<br>Las Vegas</p>
+                </div>
+            </div>
+        </div>
+        <div class="content-box">
+            <p class="text-xl italic"><br><br>"On the road again, Goin' places that I've never been, Seein' things that I may never see again, And I can't wait to get on the road again."—— On the road again, Willie Nelson</p>
+        </div>
+    </section>
+
+    <section id="game">
+        <div class="content-box">
+            <h2 class="title-font text-5xl mb-4 italic">You have known a lot about me, let’s take a break.</h2>
+            <p class="text-slate-500 mb-10 tracking-widest text-xs"></p>
+            <div id="game-container">
+                <canvas id="flappyCanvas"></canvas>
+                <div id="start-hint">Click to Start</div>
+                <div id="game-over-screen">
+                    <div id="final-score">Score: 0</div>
+                    <button id="restart-btn">Restart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="contact-footer">
+        <div class="max-w-6xl mx-auto px-10 flex flex-col md:flex-row justify-between items-center gap-10">
+            <h2 class="title-font text-4xl italic">Connect Me</h2>
+            <div class="flex gap-10 items-center">
+                <a href="mailto:sunluqi581@gmail.com" class="footer-link" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://scholar.google.com/citations?hl=zh-CN&user=8fUjHv4AAAAJ" target="_blank" class="footer-link" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://github.com/Sleepwalker554" class="footer-link" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sun-luqi-3b115a318/" class="footer-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.douban.com/people/131036494/?_i=0498827DJoXKEU" class="footer-link" title="Cinema Profile"><i class="fas fa-film"></i></a>
+            </div>
+            <p class="text-[10px] text-slate-400 tracking-[0.3em]">All Rights Reserved &copy; 2026</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
