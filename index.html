@@ -29,9 +29,11 @@
             </div>
             <div class="flex-1 text-center md:text-left">
                 <h1 class="title-font home-name">Luqi Sun</h1>
-                <p class="home-bio text-slate-600 mb-10 italic text-lg">I am currently a master’s student in the Department of Electrical and Computer Engineering at Johns Hopkins University, working as a Research Assistant in the SMILE Lab affiliated with the Center for Language and Speech Processing (CLSP), under the supervision of Professor Berrak Sisman. I received my bachelor’s degree from Dalian University of Technology, where I worked as a Research Assistant in a laboratory under the supervision of Professor Qiufen Xia during my undergraduate studies. 
-                    <br>I am passionate about research. During my undergraduate studies, my research focused on cold-start latency optimization in cloud computing and serverless computing, and I published related research as the first author. Currently, my research interests focus on speech processing and healthcare-related speech detection based on deep learning methods. 
-                    <br>In addition to research, I also love films and traveling. My current dream is to travel to France to watch films at the Cannes Film Festival.
+                <p class="home-bio text-slate-600 mb-10 italic text-lg">I am a Master student in Electrical and Computer Engineering at Johns Hopkins University. I work as a Research Assistant at the <a href="https://sites.google.com/view/jhusmile/homepage" target="_blank" class="text-amber-600 hover:underline">SMILE Lab</a>, affiliated with the 
+                    <a href="https://www.clsp.jhu.edu/" target="_blank" class="text-amber-600 hover:underline">Center for Language and Speech Processing (CLSP)</a>, under the supervision of <a href="https://engineering.jhu.edu/faculty/berrak-sisman/" target="_blank" class="text-amber-600 hover:underline">Prof. Berrak Sisman</a>.
+                    <br>I received my bachelor’s degree from Dalian University of Technology, where I worked as a Research Assistant under the supervision of <a href="https://faculty.dlut.edu.cn/qfx/zh_CN/index.htm" target="_blank" class="text-amber-600 hover:underline">Prof. Qiufen Xia</a>. 
+                    <br>I am passionate about research. Currently, my research interests focus on speech and language processing based on deep learning methods, especially in healthcare-related area. During my undergraduate studies, I focused on cold-start latency optimization in serverless computing, and published <a href="https://ieeexplore.ieee.org/abstract/document/11327821" target="_blank" class="text-amber-600 hover:underline">a first-author paper</a>. 
+                    <br>Outside of research, I also love films and traveling. My current dream is to travel to France to watch films at the Cannes Film Festival.
                 </p>
                 <div class="flex flex-wrap justify-center md:justify-start gap-5">
                     <a href="#" class="btn-unified">
@@ -45,27 +47,67 @@
         </div>
     </section>
 
+    <section id="publications">
+        <div class="content-box">
+            <h2 class="title-font text-4xl mb-10 border-l-4 border-amber-600 pl-6">Publications</h2>
+
+                <div class="timeline-item">
+                    <div>
+                        <h3 class="text-2xl font-bold">
+                            <a href="/your-link">
+                                Alzheimer's Disease Detection From Speech
+                            </a>
+                        </h3>
+                        <p class="text-slate-800 italic"><b>Luqi Sun</b>, Berrak Sisman</p>
+                        <p class="text-lg text-slate-600">Will come soon</p>
+                    </div>
+                </div>
+
+            <div class="timeline-item">
+                <div>
+                    <h3 class="text-2xl font-bold">
+                        <a href="https://arxiv.org/abs/2604.14354">
+                            Who is Speaking or Who is Depressed? A Controlled Study of Speaker Leakage in Speech-Based Depression Detection
+                        </a>
+                    </h3>
+                    <p class="text-slate-800 italic">Hsiang-Chen Yeh, <b>Luqi Sun</b>, Aurosweta Mahapatra, Shreeram Suresh Chandra, Emily Mower Provost, Berrak Sisman</p>
+                    <p class="text-lg text-slate-600">This study investigates whether speech-based depression detection models learn depression-related acoustic biomarkers or instead rely on speaker identity cues. Using the DAIC-WOZ dataset, we propose a data-splitting strategy that controls speaker overlap between training and test sets while keeping the training size constant, and evaluate three models of varying complexity. Results show that speaker overlap significantly boosts performance, whereas accuracy drops sharply on unseen speakers. Even with a Domain-Adversarial Neural Network, a substantial performance gap remains. These findings indicate that depression-related features extracted by current speech models are highly entangled with speaker identity. Conventional evaluation protocols may therefore overestimate generalization and clinical utility, highlighting the need for strictly speaker-independent evaluation.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div>
+                    <h3 class="text-2xl font-bold">
+                        <a href="https://ieeexplore.ieee.org/abstract/document/11327821">
+                            The Optimization of Cold Start Latency in Serverless Computing
+                        </a>
+                    </h3>
+                    <p class="text-slate-800 italic"><b>Luqi Sun</b>, Qiufen Xia, Xiaolong Zhai, Zhen Feng, Jiankang Ren</p>
+                    <p class="text-lg text-slate-600">While Serverless computing offers developers convenience and cost benefits, cold start latency remains a critical performance bottleneck. This paper presents an innovative solution based on a nested container architecture, designing and implementing a Nested Container System that achieves efficient runtime sharing through pre-warmed parent containers and lightweight child containers, combined with Docker volume mechanisms. The system employs optimized Docker outside of Docker (DooD) technology, enabling resource sharing while maintaining container isolation. Experimental results show that compared to traditional OpenWhisk, our Nested Container System significantly reduces cold start times-by up to 90% in some scenarios-while maintaining similar CPU utilization and lower memory consumption. The research provides new insights and solutions for resource management and performance optimization in Serverless computing.
+                    </p>
+                </div>
+            </div>
+ 
+
+            </div>
+
+    </section>
+
     <section id="academic">
         <div class="content-box">
             <div class="mb-20">
                 <h2 class="title-font text-4xl mb-10 border-l-4 border-amber-600 pl-6">Research Experience</h2>
                 <div class="timeline-item">
                     <div>
-                        <h3 class="text-2xl font-bold">The Optimization of Cold Start Latency in Serverless Computing</h3>
-                        <p class="text-slate-800 italic">Research Assistant in Dalian University of Technology, Advised by Prof. Qiufen Xia</p>
-                        <p class="text-lg text-slate-600">Proposed and implemented an innovative Serverless cold-start optimization solution based on nested containers, enabling rapid initialization of child containers through parent-container pre-warming and significantly reducing function cold-start latency. Independently designed and optimized a nested-container resource scheduling system, including parent-container pre-warming strategies to minimize startup delay and resource waste. Independently developed a child-container resource allocation algorithm to improve function execution performance, and built an adaptive Serverless resource scheduling system.
-                        </p>
+                        <h3 class="text-xl font-bold">Research Assistant in Dalian University of Technology, Advised by Prof. Qiufen Xia</h3>
                     </div>
-                    <span class="italic">02.2024 - 05.2025</span>
+                    <span class="italic">February 2024 - May 2025</span>
                 </div>
                 <div class="timeline-item">
                     <div>
-                        <h3 class="text-2xl font-bold">Alzheimer's Disease Detection From Speech</h3>
-                        <p class="text-slate-800 italic">Research Assistant in SMILE Lab (Johns Hopkins University), Advised by Prof. Berrak Sisman</p>
-                        <p class="text-lg text-slate-600">Will come soon</p>
-                        <!-- <p class="text-lg text-slate-600">Conducted Alzheimer’s disease speech detection based on deep learning approaches. Designed and implemented three speech detection models with different levels of complexity. Improved model robustness under noise interference, varying recording environments, and speaker variability using multiple unsupervised domain adaptation methods. Proposed a novel unsupervised domain adaptation approach, and experimental results demonstrate that the proposed method effectively improves detection performance and robustness under cross-domain conditions.</p> -->
+                        <h3 class="text-xl font-bold">Research Assistant in Johns Hopkins University, Advised by Prof. Berrak Sisman</h3>
                     </div>
-                    <span class="italic">09.2025 - Present</span>
+                    <span class="italic">August 2025 - Present</span>
                 </div>
             </div>
             <div>
@@ -73,7 +115,7 @@
                 <div class="timeline-item">
                     <div>
                         <h3 class="text-xl font-bold">Dalian University of Technology · Bachelor</h3>
-                        <p class="text-grey-500">Digital Media Technology</p>
+                        <p class="text-grey-500">Digital Media Technology, Software Engineering</p>
                     </div>
                     <span class="italic">2021 - 2025</span>
                 </div>
@@ -82,36 +124,9 @@
                         <h3 class="text-xl font-bold">Johns Hopkins University · Master</h3>
                         <p class="text-grey-500">Electricial and Computer Engineering</p>
                     </div>
-                    <span class="italic">2025 - 2027</span>
+                    <span class="italic">2025 - Present</span>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="publications">
-        <div class="content-box">
-            <h2 class="title-font text-5xl mb-4 italic">Publications</h2>
-            <div class="space-y-8 mt-10">
-                <div class="p-8 bg-white/50 rounded-xl border border-white hover:shadow-lg transition">
-                    <span class="text-amber-700 font-bold text-xs tracking-widest">Published in 2025</span>
-                    <h3 class="text-2xl font-bold mt-2 mb-6">“The Optimization of Container Cold Start Latency in Serverless Computing by Nested Architecture”</h3>
-                    <div class="flex gap-6">
-                        <a href="https://ieeexplore.ieee.org/abstract/document/11327821" class="text-sm font-bold border-b border-slate-800">Paper PDF</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="space-y-8 mt-10">
-                <div class="p-8 bg-white/50 rounded-xl border border-white hover:shadow-lg transition">
-                    <span class="text-amber-700 font-bold text-xs tracking-widest">Published in 2026</span>
-                    <h3 class="text-2xl font-bold mt-2 mb-6">“Will Come Soon”</h3>
-                    <div class="flex gap-6">
-                        <a href="#" class="text-sm font-bold border-b border-slate-800">Paper PDF</a>
-                        <a href="#" class="text-sm font-bold border-b border-slate-800">Paper Website</a>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 

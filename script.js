@@ -11,7 +11,7 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('section').forEach(s => observer.observe(s));
 
 function updateNav(id) {
-    const sections = ['home', 'academic', 'publications', 'movies', 'travel', 'game'];
+    const sections = ['home', 'publications', 'academic', 'movies', 'travel', 'game'];
     const dots = document.querySelectorAll('.dot');
     const idx = sections.indexOf(id);
     if(idx !== -1) {
