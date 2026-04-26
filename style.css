@@ -23,8 +23,7 @@ body, html { margin: 0; padding: 0; overflow-x: hidden; scroll-behavior: smooth;
     z-index: 9999;
 }
 
-section { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 5vh 10%; position: relative; box-sizing: border-box; }
-section:nth-child(even) { background-color: var(--bg-dark); }
+section { min-height: 100vh; position: relative; box-sizing: border-box; }
 
 .content-box { max-width: 1100px; width: 100%; opacity: 0; transform: translateY(30px); transition: var(--transition-smooth); box-sizing: border-box; }
 .in-view .content-box { opacity: 1; transform: translateY(0); }
@@ -41,15 +40,43 @@ section:nth-child(even) { background-color: var(--bg-dark); }
 
 .grid-item { display: flex; flex-direction: column; gap: 15px; min-width: 0; box-sizing: border-box; }
 
-/* Travel section 特殊布局 */
-#travel {
-    display: block;
-    padding: 10vh 10%;
+/* SPA 单页切换：默认隐藏所有 section，仅显示 .active-page */
+section { display: none; }
+section.active-page { display: block; }
+
+#academic, #life {
+    padding: 0;
+    min-height: 0;
 }
 
-#travel .content-box {
-    margin: 0 auto;
-    padding: 0;
+/* 每个 sub-page 占满一屏，自带配色 */
+.sub-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: calc(80px + 5vh) 10% 5vh;
+    box-sizing: border-box;
+    background-color: var(--bg-light);
+}
+.sub-page-dark { background-color: var(--bg-dark); }
+
+/* 紧凑子页：只占内容自身高度，不撑满整屏 */
+.sub-page-compact {
+    min-height: auto;
+    padding-top: calc(80px + 8vh);
+    padding-bottom: 8vh;
+}
+
+.sub-page > .content-box {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Travel 子页：内容多 + 图片网格全屏宽，需要 block 排列 */
+.sub-page-travel {
+    display: block;
+    padding: calc(80px + 5vh) 10% 5vh;
 }
 
 /* Travel 照片容器 - 全屏宽度 */
@@ -117,10 +144,46 @@ section:nth-child(even) { background-color: var(--bg-dark); }
     padding-left: 12px;
 }
 
-/* 侧边导航 */
-.nav-dots { position: fixed; right: 30px; top: 50%; transform: translateY(-50%); z-index: 100; }
-.dot { width: 8px; height: 8px; background: rgba(0,0,0,0.2); margin: 20px 0; border-radius: 50%; cursor: pointer; transition: 0.3s; }
-.dot.active { background: var(--accent); transform: scale(1.8); }
+/* 顶部导航 */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 1.25rem 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: rgba(244, 241, 238, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.top-nav-tabs {
+    display: flex;
+    gap: 2.5rem;
+}
+.top-nav-tab {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    padding: 0.4rem 0;
+    position: relative;
+    transition: color 0.3s;
+}
+.top-nav-tab:hover { color: var(--text-main); }
+.top-nav-tab.active { color: var(--text-main); }
+.top-nav-tab.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+    background: var(--accent);
+}
 
 /* 底栏 */
 .contact-footer { background: white; padding: 80px 0; border-top: 1px solid rgba(0,0,0,0.05); }

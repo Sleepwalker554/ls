@@ -1,28 +1,32 @@
-// 1. 页面滚动与导航
-const observer = new IntersectionObserver((entries) => {
+// 1. SPA 页面切换
+function showPage(id) {
+    document.querySelectorAll('section').forEach(s => {
+        s.classList.toggle('active-page', s.id === id);
+    });
+    document.querySelectorAll('.top-nav-tab').forEach(t => {
+        t.classList.toggle('active', t.dataset.target === id);
+    });
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    if (id === 'life') window.dispatchEvent(new Event('resize'));
+}
+
+document.querySelectorAll('[data-target]').forEach(el => {
+    el.addEventListener('click', e => {
+        e.preventDefault();
+        showPage(el.dataset.target);
+    });
+});
+
+const initialPage = (location.hash === '#life') ? 'life' : 'academic';
+showPage(initialPage);
+
+// 2. sub-page 滚动入场动画
+const subPageObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-            updateNav(entry.target.id);
-        }
+        if (entry.isIntersecting) entry.target.classList.add('in-view');
     });
 }, { threshold: 0.2 });
-
-document.querySelectorAll('section').forEach(s => observer.observe(s));
-
-function updateNav(id) {
-    const sections = ['home', 'publications', 'academic', 'movies', 'travel', 'game'];
-    const dots = document.querySelectorAll('.dot');
-    const idx = sections.indexOf(id);
-    if(idx !== -1) {
-        dots.forEach(d => d.classList.remove('active'));
-        dots[idx].classList.add('active');
-    }
-}
-
-function scrollToSection(idx) {
-    document.querySelectorAll('section')[idx].scrollIntoView({ behavior: 'smooth' });
-}
+document.querySelectorAll('.sub-page').forEach(sp => subPageObserver.observe(sp));
 
 // 2. 游戏逻辑 - 等待 DOM 加载完成
 document.addEventListener('DOMContentLoaded', function() {
