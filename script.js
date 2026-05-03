@@ -1,26 +1,4 @@
-// 1. SPA 页面切换
-function showPage(id) {
-    document.querySelectorAll('section').forEach(s => {
-        s.classList.toggle('active-page', s.id === id);
-    });
-    document.querySelectorAll('.top-nav-tab').forEach(t => {
-        t.classList.toggle('active', t.dataset.target === id);
-    });
-    window.scrollTo({ top: 0, behavior: 'instant' });
-    if (id === 'life') window.dispatchEvent(new Event('resize'));
-}
-
-document.querySelectorAll('[data-target]').forEach(el => {
-    el.addEventListener('click', e => {
-        e.preventDefault();
-        showPage(el.dataset.target);
-    });
-});
-
-const initialPage = (location.hash === '#life') ? 'life' : 'academic';
-showPage(initialPage);
-
-// 2. sub-page 滚动入场动画
+// 1. sub-page 滚动入场动画
 const subPageObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('in-view');
@@ -106,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     const canvas = document.getElementById('flappyCanvas');
+    if (!canvas) return;
     const ctx = canvas.getContext('2d');
     const container = document.getElementById('game-container');
     const overScreen = document.getElementById('game-over-screen');
