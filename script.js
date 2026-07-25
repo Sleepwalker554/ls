@@ -1,4 +1,4 @@
-// 1. sub-page 滚动入场动画
+// 1. sub-page scroll-in animation
 const subPageObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('in-view');
@@ -6,9 +6,9 @@ const subPageObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 document.querySelectorAll('.sub-page').forEach(sp => subPageObserver.observe(sp));
 
-// 2. 游戏逻辑 - 等待 DOM 加载完成
+// 2. Game logic - wait for the DOM to finish loading
 document.addEventListener('DOMContentLoaded', function() {
-    // 烟花系统
+    // Fireworks system
     const fireworksCanvas = document.getElementById('fireworksCanvas');
     const fwCtx = fireworksCanvas.getContext('2d');
     fireworksCanvas.width = window.innerWidth;
@@ -20,13 +20,13 @@ document.addEventListener('DOMContentLoaded', function() {
     function launchFireworks() {
         console.log('🎉 Launching fireworks!');
         
-        // 立即创建20个烟花
+        // Immediately create 20 fireworks
         for (let i = 0; i < 20; i++) {
             const x = Math.random() * window.innerWidth;
             const y = Math.random() * window.innerHeight;
             const colors = ['#FFD700', '#FF6B6B', '#4ECDC4', '#45B7D1', '#FFA07A'];
             
-            // 每个烟花30个粒子
+            // 30 particles per firework
             for (let j = 0; j < 30; j++) {
                 const angle = (Math.PI * 2 * j) / 30;
                 const speed = 2 + Math.random() * 3;
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let bird, pipes, score, gameRunning = false, gameStarted = false, animationId;
     let lastCelebrationScore = 0;
 
-    // 确保初始状态正确
+    // Make sure the initial state is correct
     overScreen.style.display = 'none';
     startHint.style.display = 'block';
 
@@ -119,18 +119,18 @@ document.addEventListener('DOMContentLoaded', function() {
     function draw() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         
-        // 画鸟 (学术金色方块)
+        // Draw the bird (academic gold square)
         ctx.fillStyle = '#c5a47e';
         ctx.fillRect(bird.x, bird.y, bird.w, bird.h);
 
-        // 画柱子 (简约灰)
+        // Draw the pipes (minimal gray)
         ctx.fillStyle = '#cbd5e1';
         pipes.forEach(p => {
             ctx.fillRect(p.x, 0, p.w, p.topH);
             ctx.fillRect(p.x, p.bottomY, p.w, canvas.height - p.bottomY);
         });
 
-        // 画分数
+        // Draw the score
         ctx.fillStyle = '#2d2d2d';
         ctx.font = 'bold 32px DM Sans';
         ctx.fillText('Score: ' + score, 20, 50);
@@ -148,15 +148,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
         pipes.forEach((p, i) => {
             p.x -= 2.5;
-            // 碰撞检测
+            // Collision detection
             if (bird.x < p.x + p.w && bird.x + bird.w > p.x &&
                 (bird.y < p.topH || bird.y + bird.h > p.bottomY)) gameRunning = false;
-            // 计分
+            // Scoring
             if (p.x + p.w < bird.x && !p.scored) { 
                 score++; 
                 p.scored = true;
                 
-                // 每达到10的倍数触发全屏烟花庆祝
+                // Trigger a fullscreen fireworks celebration at every multiple of 10
                 if (score % 10 === 0 && score > lastCelebrationScore) {
                     lastCelebrationScore = score;
                     console.log('🎉 Score ' + score + '!');
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // 支持空格键控制
+    // Support spacebar control
     document.addEventListener('keydown', (e) => {
         if (e.code === 'Space') {
             e.preventDefault();

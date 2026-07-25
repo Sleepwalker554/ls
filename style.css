@@ -12,7 +12,7 @@
 body, html { margin: 0; padding: 0; overflow-x: hidden; scroll-behavior: smooth; font-family: 'DM Sans', sans-serif; background-color: var(--bg-light); color: var(--text-main); }
 .title-font { font-family: 'Playfair Display', serif; }
 
-/* 全屏烟花画布 */
+/* Fullscreen fireworks canvas */
 #fireworksCanvas {
     position: fixed;
     top: 0;
@@ -28,7 +28,7 @@ section { min-height: 100vh; position: relative; box-sizing: border-box; }
 .content-box { max-width: 1100px; width: 100%; opacity: 0; transform: translateY(30px); transition: var(--transition-smooth); box-sizing: border-box; }
 .in-view .content-box { opacity: 1; transform: translateY(0); }
 
-/* 照片等大网格 */
+/* Equal-size photo grid */
 .standard-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -40,7 +40,7 @@ section { min-height: 100vh; position: relative; box-sizing: border-box; }
 
 .grid-item { display: flex; flex-direction: column; gap: 15px; min-width: 0; box-sizing: border-box; }
 
-/* SPA 单页切换：默认隐藏所有 section，仅显示 .active-page */
+/* SPA page switching: hide all sections by default, show only .active-page */
 section { display: none; }
 section.active-page { display: block; }
 
@@ -49,7 +49,7 @@ section.active-page { display: block; }
     min-height: 0;
 }
 
-/* 每个 sub-page 占满一屏，自带配色 */
+/* Each sub-page fills one screen and carries its own color scheme */
 .sub-page {
     min-height: 100vh;
     display: flex;
@@ -61,7 +61,7 @@ section.active-page { display: block; }
 }
 .sub-page-dark { background-color: var(--bg-dark); }
 
-/* 紧凑子页：只占内容自身高度，不撑满整屏 */
+/* Compact sub-page: takes only the content's own height instead of the full screen */
 .sub-page-compact {
     min-height: auto;
     padding-top: calc(80px + 8vh);
@@ -73,13 +73,13 @@ section.active-page { display: block; }
     margin-right: auto;
 }
 
-/* Travel 子页：内容多 + 图片网格全屏宽，需要 block 排列 */
+/* Travel sub-page: lots of content + full-width image grid, needs block layout */
 .sub-page-travel {
     display: block;
     padding: calc(80px + 5vh) 10% 5vh;
 }
 
-/* Travel 照片容器 - 全屏宽度 */
+/* Travel photo container - full viewport width */
 .travel-grid-container {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
@@ -87,7 +87,7 @@ section.active-page { display: block; }
     box-sizing: border-box;
 }
 
-/* Travel 照片网格 - 上下等高，左右自适应 */
+/* Travel photo grid - equal row heights, columns adapt */
 .travel-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -144,7 +144,7 @@ section.active-page { display: block; }
     padding-left: 12px;
 }
 
-/* 顶部导航 */
+/* Top navigation */
 .top-nav {
     position: fixed;
     top: 0;
@@ -185,12 +185,12 @@ section.active-page { display: block; }
     background: var(--accent);
 }
 
-/* 底栏 */
+/* Footer */
 .contact-footer { background: white; padding: 80px 0; border-top: 1px solid rgba(0,0,0,0.05); }
 .footer-link { font-size: 1.6rem; color: var(--text-main); transition: 0.3s; }
 .footer-link:hover { color: var(--accent); transform: translateY(-3px); }
 
-/* 其他基础样式 */
+/* Other base styles */
 .home-name { font-size: 3.5rem; margin-bottom: 1.5rem; }
 .home-bio { font-size: 1.5rem; line-height: 1.6; }
 .btn-unified { background: var(--text-main); color: white !important; padding: 12px 28px; border-radius: 4px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; transition: all 0.3s ease; min-width: 200px; }
@@ -200,7 +200,7 @@ section.active-page { display: block; }
 .timeline-item h3 a:hover { color: var(--accent); }
 .timeline-item p + p { margin-top: 0.5rem; }
 
-/* Flappy Bird 游戏样式 */
+/* Flappy Bird game styles */
 #game-container {
     position: relative;
     width: 100%;
