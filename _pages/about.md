@@ -15,4 +15,4 @@ My research interests focus on speech and language processing based on deep lear
 
 I received my bachelor's degree from Dalian University of Technology, where I worked as a Research Assistant under the supervision of Prof. [Qiufen Xia](https://faculty.dlut.edu.cn/qfx/zh_CN/index.htm). During my undergraduate studies, I focused on cold-start latency optimization in serverless computing and led to a paper published in 21st International Conference on Mobility, Sensing and Networking.
 
-Outside of research, I love [films and traveling]({{ base_path }}/life/). My current dream is to travel to France to watch films at the Cannes Film Festival.
+Outside of research, I love [films and traveling]({{ base_path }}/life/). My dream is to travel to different places and attend film festivals around the world.
