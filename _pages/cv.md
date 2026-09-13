@@ -12,7 +12,7 @@ redirect_from:
 Education
 ======
 * **Johns Hopkins University**, M.S. in Electrical and Computer Engineering, Aug 2025 – Present
-* **Dalian University of Technology**, B.Eng. in Digital Media Technology, Software Engineering, Sep 2021 – Jun 2025
+* **Dalian University of Technology**, B.Eng. in Digital Media Technology, Sep 2021 – Jun 2025
 
 Research Experience
 ======
