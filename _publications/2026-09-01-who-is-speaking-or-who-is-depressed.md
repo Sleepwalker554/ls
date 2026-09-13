@@ -5,6 +5,7 @@ category: conferences
 permalink: /publication/2026-09-01-who-is-speaking-or-who-is-depressed
 date: 2026-09-01
 venue: 'Interspeech'
+venue_display: 'Interspeech 2026' # shown on the Publications page only
 paperurl: 'https://arxiv.org/abs/2604.14354'
 ---
 
