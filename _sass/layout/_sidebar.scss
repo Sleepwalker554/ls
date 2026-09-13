@@ -156,6 +156,9 @@
   img {
     max-width: 175px;
     border-radius: 50%;
+    // crop non-square photos to a circle instead of an ellipse
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 
     @include breakpoint($large) {
       padding: 5px;
