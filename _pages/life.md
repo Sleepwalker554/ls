@@ -180,20 +180,20 @@ I love traveling. I enjoy stepping into a bustling and unfamiliar city, experien
 
 Below are some of the cities I have visited and photos I took during the journeys.
 
-### 2023
+### 2026
 
-{% include gallery id="travel_2023" caption="Wukang Mansion, Shanghai; Dalian; FIRST International Film Festival, Xining; Chaka Salt Lake, Qinghai; Singing Sand Dunes, Dunhuang; Dunhuang; National Highway, Gansu" %}
-
-### 2024
-
-{% include gallery id="travel_2024" caption="Ruins of St. Paul's, Macau; Chungking Mansions, Hong Kong; Temple of Heaven, Beijing" %}
+{% include gallery id="travel_2026" caption="Three Natural Bridges, Wulong; Star Ferry, Hong Kong; The Strip, Las Vegas" %}
 
 ### 2025
 
 {% include gallery id="travel_2025" caption="Fumin Road, Shanghai; Shanghai; Xiyuan Temple, Suzhou; West Lake, Hangzhou; Xiao Mausoleum, Nanjing; Sun Yat-sen Mausoleum Music Stage, Nanjing; The Palace Museum, Beijing; Yungang Grottoes, Datong; Kwun Lung, Hong Kong; N Seoul Tower, Seoul; Busan; Los Angeles; George Peabody Library, Baltimore; Washington D.C.; Hongya Cave, Chongqing" %}
 
-### 2026
+### 2024
 
-{% include gallery id="travel_2026" caption="Three Natural Bridges, Wulong; Star Ferry, Hong Kong; The Strip, Las Vegas" %}
+{% include gallery id="travel_2024" caption="Ruins of St. Paul's, Macau; Chungking Mansions, Hong Kong; Temple of Heaven, Beijing" %}
+
+### 2023
+
+{% include gallery id="travel_2023" caption="Wukang Mansion, Shanghai; Dalian; FIRST International Film Festival, Xining; Chaka Salt Lake, Qinghai; Singing Sand Dunes, Dunhuang; Dunhuang; National Highway, Gansu" %}
 
 > "On the road again, Goin' places that I've never been, Seein' things that I may never see again, And I can't wait to get on the road again." — *On the Road Again*, Willie Nelson

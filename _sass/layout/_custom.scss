@@ -1,0 +1,42 @@
+/* ==========================================================================
+   SITE CUSTOMIZATIONS
+   ========================================================================== */
+
+/* Slightly smaller text everywhere except the left sidebar (name, bio, links) */
+.page,
+.archive,
+.greedy-nav {
+  font-size: 0.9em;
+}
+
+/* Publications: compact entries with equal title→venue and venue→authors gaps */
+.archive > .list__item {
+  .archive__item-title {
+    margin-top: 1.4em;
+    margin-bottom: 0;
+  }
+
+  .archive__item > p {
+    margin: 1em 0 0;
+
+    &:empty {
+      margin: 0;
+    }
+  }
+}
+
+/* Publications: tighten the gap between a year heading and its first entry */
+.archive hr + .list__item .archive__item-title {
+  margin-top: 0.5em;
+}
+
+/* CV: tighten the spacing between entries in the Publications & Patents list */
+.archive ul .list__item {
+  .archive__item-title {
+    margin-top: 0.6em;
+  }
+
+  .archive__item-excerpt {
+    margin-bottom: 0;
+  }
+}
