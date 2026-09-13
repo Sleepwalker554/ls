@@ -12,7 +12,9 @@ redirect_from:
 Education
 ======
 * **Johns Hopkins University**, M.S. in Electrical and Computer Engineering, Aug 2025 – Present
+  * GPA: 3.47/4.0
 * **Dalian University of Technology**, B.Eng. in Digital Media Technology, Sep 2021 – Jun 2025
+  * Major GPA: 88.49/100
 
 Research Experience
 ======
