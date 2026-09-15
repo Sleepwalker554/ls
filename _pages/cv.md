@@ -11,7 +11,7 @@ redirect_from:
 
 Education
 ======
-* **Johns Hopkins University**, Master of Science in Engineering (MSE) in Electrical and Computer Engineering, Aug 2025 – Present
+* Master of Science in Engineering (M.S.E.) in Electrical and Computer Engineering, **Johns Hopkins University**, Aug 2025 – Present
   * GPA: 3.47/4.0
 * **Dalian University of Technology**, Bachelor’s degree in Digital Media Technology, Sep 2021 – Jun 2025
   * Major GPA: 88.49/100
