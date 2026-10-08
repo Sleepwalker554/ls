@@ -4,7 +4,7 @@ collection: publications
 category: conferences
 permalink: /publication/2026-12-31-robust-cross-domain-ad-detection
 date: 2026-12-31 # latest date so it is listed first
-venue: 'Submitted to NeurIPS Workshop'
+venue: 'Submitted to ICASSP'
 submitted: true # shown without the "Published in" prefix
 paperurl: 'https://arxiv.org/abs/2609.14139'
 ---
