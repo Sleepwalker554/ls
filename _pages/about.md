@@ -22,4 +22,4 @@ I received my bachelor's degree from Dalian University of Technology, where I wo
 
 Outside of research, I love [films and traveling]({{ base_path }}/life/). My dream is to travel to different places and attend film festivals around the world.
 
-<a href="{{ base_path }}/Luqi_CV.pdf" class="btn btn--inverse" target="_blank" rel="noopener"><i class="fas fa-file-pdf icon-pad-right" aria-hidden="true"></i>View CV (PDF)</a>
+[Download CV]({{ base_path }}/Luqi_CV.pdf)

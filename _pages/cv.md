@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-<a href="{{ base_path }}/Luqi_CV.pdf" class="btn btn--inverse" target="_blank" rel="noopener"><i class="fas fa-file-pdf icon-pad-right" aria-hidden="true"></i>View CV (PDF)</a>
+[Download CV]({{ base_path }}/Luqi_CV.pdf)
 
 Education
 ======
