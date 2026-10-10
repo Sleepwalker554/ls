@@ -9,6 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
+<a href="{{ base_path }}/Luqi_CV.pdf" class="btn btn--inverse" target="_blank" rel="noopener"><i class="fas fa-file-pdf icon-pad-right" aria-hidden="true"></i>View CV (PDF)</a>
+
 Education
 ======
 * Master of Science in Engineering (M.S.E.) in Electrical and Computer Engineering, **Johns Hopkins University**, Aug 2025 – Present
