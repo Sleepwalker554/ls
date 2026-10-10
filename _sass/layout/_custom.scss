@@ -40,3 +40,12 @@
     margin-bottom: 0;
   }
 }
+
+/* CV: PDF pages rendered inline by PDF.js */
+.cv-viewer__page {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1em;
+  border: 1px solid var(--global-border-color);
+}
