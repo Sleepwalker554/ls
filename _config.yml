@@ -23,7 +23,7 @@ repository               : "Sleepwalker554/personal-website"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "image.jpg"
+  avatar           : "/image.jpg"
   name             : "Luqi Sun"
   pronouns         : # example: "she/her"  
   bio              : "MSE student in ECE at Johns Hopkins University"
