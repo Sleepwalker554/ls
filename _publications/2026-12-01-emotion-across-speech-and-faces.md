@@ -2,6 +2,7 @@
 title: 'Emotion Across Speech and Faces: Shared Affective Mechanisms in Multimodal Foundation Models'
 collection: publications
 category: conferences
+publication_order: 4
 permalink: /publication/2026-12-01-emotion-across-speech-and-faces
 date: 2026-12-01
 venue: 'IEEE Spoken Language Technology Workshop (SLT)'

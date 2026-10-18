@@ -2,6 +2,7 @@
 title: 'The Optimization of Container Cold Start Latency in Serverless Computing by Nested Architecture'
 collection: publications
 category: conferences
+publication_order: 6
 permalink: /publication/2025-12-01-cold-start-latency-serverless
 date: 2025-12-01
 venue: '21st International Conference on Mobility, Sensing and Networking (MSN)'

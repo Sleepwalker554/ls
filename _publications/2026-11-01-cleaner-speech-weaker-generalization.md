@@ -2,6 +2,7 @@
 title: 'Cleaner Speech, Weaker Generalization: Revisiting Pitt-Derived Benchmarks for Alzheimer''s Disease Detection'
 collection: publications
 category: conferences
+publication_order: 3
 permalink: /publication/2026-11-01-cleaner-speech-weaker-generalization
 date: 2026-11-01
 venue: 'The 5th AACL & 15th IJCNLP Main Conference'
